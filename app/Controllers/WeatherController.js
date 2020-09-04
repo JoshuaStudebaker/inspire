@@ -7,19 +7,19 @@ import weatherService from "../Services/WeatherService.js";
 //TODO Complete rendering data to the screen
 function drawWeather() {
   console.log("THE WEATHER MAN SAYS:", ProxyState.weather);
+  let template = "";
 }
 export default class WeatherController {
   constructor() {
     ProxyState.on("weather", drawWeather);
-    this.getWeather()
+    this.getWeather();
   }
 
   getWeather() {
     try {
-      weatherService.getWeather()
-    }
-    catch (e) {
-      console.error(e)
+      weatherService.getWeather();
+    } catch (e) {
+      console.error(e);
     }
   }
 }
