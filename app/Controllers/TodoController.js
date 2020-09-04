@@ -21,12 +21,19 @@ export default class TodoController {
       console.error(error);
     }
   }
-  addTodo(e) {
-    e.preventDefault();
-    var form = e.target;
+  addTodo() {
+    event.preventDefault();
+    let form = event.target;
+    console.log(form);
     //TODO build the todo object from the data that comes into this method
-    var todo = {};
+    let todo = {
+      // @ts-ignore
+      user: form.user.value,
+      // @ts-ignore
+      description: form.description.value,
+    };
     try {
+      console.log(todo);
       todoService.addTodo(todo);
     } catch (error) {
       console.error(error);

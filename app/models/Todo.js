@@ -1,12 +1,15 @@
 export default class Todo {
-  constructor({ id }) {
-    console.log(id);
-    this.id = id;
+  constructor({ _id, completed, user, description }) {
+    console.log(_id);
+    this._id = _id;
+    this.completed = completed;
+    this.user = user;
+    this.description = description;
   }
 
   get Template() {
     return `
-    <p>${this.id}</p>
+    <p>${this._id} - ${this.user}</p>
     `;
   }
 }
