@@ -10,4 +10,10 @@ export default class Weather {
     this.city = data.name;
     this.kelvin = data.main.temp;
   }
+
+  get Template() {
+    return `
+  <p>Weather: ${this.kelvin}K - ${this.city}</p>
+  `;
+  }
 }

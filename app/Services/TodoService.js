@@ -7,7 +7,7 @@ let url = "YOURNAME/todos/";
 class TodoService {
   async getTodos() {
     console.log("Getting the Todo List");
-    let res = await api.get(url);
+    let res = await api.get("joshuas/todos");
     //TODO Handle this response from the server
   }
 
