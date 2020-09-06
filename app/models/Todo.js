@@ -8,7 +8,12 @@ export default class Todo {
 
   get Template() {
     return `
-    <p>${this.description}</p>
+    <form>
+    <div class="custom-control custom-checkbox">
+  <input type="checkbox" class="custom-control-input" id="completed">
+  <label class="custom-control-label" for="completed" value="true">${this.description}</label>
+</div>
+<form>
     `;
   }
 }
