@@ -51,14 +51,18 @@ export default class TodoController {
     // @ts-ignore
     let user = userForm.user.value;
     todoService.addUser(user);
-    _drawTodoQuestion(user);
+    _drawTodoList();
+    this.getTodos();
   }
 
-  addTodoList() {
-    event.preventDefault;
-    console.log(event.target);
-    _drawTodoList();
-  }
+  // createTodoList(user) {}
+
+  // addTodoList(user) {
+  //   event.preventDefault;
+  //   console.log(event.target);
+  //   _drawTodoList();
+  // }
+
   addTodo() {
     event.preventDefault();
     let form = event.target;

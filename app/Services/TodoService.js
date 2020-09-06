@@ -2,17 +2,22 @@ import { ProxyState } from "../AppState.js";
 import { api } from "../Services/AxiosService.js";
 
 // TODO you will need to change 'YOURNAME' to your actual name or all requests will be rejected
-let url = "joshua-s/todos/";
+let url = "joshua/todos/";
 
 class TodoService {
   addUser(user) {
     let userNow = user;
-    return userNow;
+    url = userNow + "/todos/";
   }
+
+  //   async createTodos(initialTodo) {
+  //    let res = await
+  //  }
 
   async getTodos() {
     console.log("Getting the Todo List");
     let res = await api.get(url);
+    console.log(res);
     //TODO Handle this response from the server
   }
 
