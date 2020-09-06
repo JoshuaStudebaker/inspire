@@ -10,7 +10,8 @@
 
   <body>
     <main>
-        <form onsubmit="app.todoController.addTodo()">
+      <div id="initial-user-display">
+        <form onsubmit="app.todoController.addUser()">
           <div class="form-group">
             <label for="user">Name</label>
             <input
@@ -20,13 +21,13 @@
               id="user"
               placeholder="Your name..."
             />
-          <label for=description">Task</label>
-          <input type="text" class="form-control" name="description" id=description" placeholder="Task..." />
           </div>
-        <div class="col-auto">
+          <div class="col-auto">
             <button type="submit" class="btn btn-primary mb-2">Submit</button>
-        </div>
+          </div>
         </form>
+      </div>
+      <div id="todo-list-display"></div>
       <div id="app"></div>
       <div id="weather-display"></div>
       <div id="quote-display"></div>

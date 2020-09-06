@@ -12,4 +12,10 @@ export default class Todo {
     <p>${this._id} - ${this.user}</p>
     `;
   }
+
+  get UserTemplate() {
+    return `
+    <p>Hello ${this.user}</p>
+    `;
+  }
 }

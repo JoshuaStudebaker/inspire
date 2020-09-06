@@ -7,6 +7,28 @@ function _drawTodos() {
   ProxyState.todos.forEach((td) => (template += td.Template));
   document.getElementById("todos-display").innerHTML = template;
 }
+
+function _drawUser() {
+  let template = "";
+  ProxyState.todos.forEach((td) => (template += td.UserTemplate));
+  document.getElementById("user-display").innerHTML = template;
+}
+
+function _drawTodoQuestion(user) {
+  let template =
+    "<p>Hello " +
+    user +
+    "! Would you like to create a Todo List?</p><div><form onsubmit='app.todoController.addTodoListDisplay(" +
+    user +
+    ")'</form><button type='submit' class='btn btn-primary mb-2'>Yes!</button></form";
+  document.getElementById("initial-user-display").innerHTML = template;
+}
+
+function _drawTodoList() {
+  let template =
+    "<form onsubmit='app.todoController.addTodo()'>    < div class='form-group' >      <label for=description'>Task</label>        < input type = 'text' class='form-control' name = 'description' id = description' placeholder='Task...' />            </div >    <div class='col-auto'>      <button type='submit' class='btn btn-primary mb-2'>Submit</button>    </div>        </form >";
+  document.getElementById("todo-list-display").innerHTML = template;
+}
 export default class TodoController {
   constructor() {
     //TODO Remember to register your subscribers
@@ -20,6 +42,22 @@ export default class TodoController {
     } catch (error) {
       console.error(error);
     }
+  }
+
+  addUser() {
+    event.preventDefault();
+    let userForm = event.target;
+    console.log(userForm);
+    // @ts-ignore
+    let user = userForm.user.value;
+    todoService.addUser(user);
+    _drawTodoQuestion(user);
+  }
+
+  addTodoList() {
+    event.preventDefault;
+    console.log(event.target);
+    _drawTodoList();
   }
   addTodo() {
     event.preventDefault();
