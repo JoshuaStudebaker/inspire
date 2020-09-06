@@ -1,9 +1,9 @@
 export default class Todo {
-  constructor({ data }) {
-    this._id = data._id;
-    this.completed = data.completed;
-    this.user = data.user;
-    this.description = data.description;
+  constructor({ _id, completed, user, description }) {
+    this._id = _id;
+    this.completed = completed;
+    this.user = user;
+    this.description = description;
   }
 
   get Template() {

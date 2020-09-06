@@ -10,7 +10,7 @@ class TodoService {
     console.log("Getting the Todo List");
     let res = await api.get(url);
     console.log(res);
-    ProxyState.todos = new Todo(res.data);
+    ProxyState.todos = res.data.data.map((t) => new Todo(t));
     //TODO Handle this response from the server
   }
 
