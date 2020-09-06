@@ -45,6 +45,7 @@ export default class TodoController {
    * @param {string} todoId
    */
   toggleTodoStatus(todoId) {
+    console.log("is this working?");
     try {
       todoService.toggleTodoStatus(todoId);
     } catch (error) {

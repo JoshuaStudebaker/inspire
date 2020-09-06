@@ -24,9 +24,21 @@ class TodoService {
     //TODO Make sure that you found a todo,
     //		and if you did find one
     //		change its completed status to whatever it is not (ex: false => true or true => false)
+    if (!todo) {
+      throw new Error("To-Do Task not found!");
+    }
+    if (todo.completed == true) {
+      todo.completed = false;
+    } else {
+      todo.completed = true;
+    }
+    console.log(todo);
 
+    // REVIEW This seems to be working, but I am not sure why
     let res = await api.put(url + todoId, todo);
+
     //TODO how do you trigger this change
+    ProxyState.todos = ProxyState.todos;
   }
 
   async removeTodo(todoId) {

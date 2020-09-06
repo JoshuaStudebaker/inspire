@@ -7,13 +7,22 @@ export default class Todo {
   }
 
   get Template() {
+    if (!this.completed) {
+      return `
+      
+      <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="completed">
+      <label class="custom-control-label" for="completed" value="" onclick="app.todoController.toggleTodoStatus('${this._id}')">${this.description}</label>
+      </div>
+      
+      `;
+    }
+
     return `
-    <form>
     <div class="custom-control custom-checkbox">
-  <input type="checkbox" class="custom-control-input" id="completed">
-  <label class="custom-control-label" for="completed" value="true">${this.description}</label>
-</div>
-<form>
+      <input type="checkbox" class="custom-control-input" id="completed" checked>
+      <label class="custom-control-label text-muted" for="completed" value="" onclick="app.todoController.toggleTodoStatus('${this._id}')"><s>${this.description}</s></label>
+      </div>
     `;
   }
 }
