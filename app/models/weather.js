@@ -19,7 +19,7 @@ export default class Weather {
 
   get Template() {
     return `
-  <p>${this.city} Weather: ${this.TemplateUnit} and ${this.description}</p>
+  <h3 class="weather my-0">${this.city} Weather:</h3><h3 class="text-muted">${this.TemplateUnit} and ${this.description}</h3>
   `;
   }
 

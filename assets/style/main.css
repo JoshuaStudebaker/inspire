@@ -54,6 +54,10 @@ header {
   height: 10vh;
 }
 
+i {
+  cursor: pointer;
+}
+
 .clock-box {
   background-color: var(--halfway-see-through-snow-grey);
   border-radius: 50%;
