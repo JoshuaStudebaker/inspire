@@ -42,7 +42,6 @@ body {
 
 main {
   flex-grow: 1;
-  position: relative;
 }
 
 footer {
@@ -50,6 +49,9 @@ footer {
   height: 10vh;
 }
 
+.row-full {
+  flex-grow: 1;
+}
 #background {
   background-position: center;
   background-size: cover;
