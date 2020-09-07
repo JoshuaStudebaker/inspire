@@ -6,6 +6,21 @@ function _drawTodos() {
   let template = "";
   ProxyState.todos.forEach((td) => (template += td.Template));
   document.getElementById("todos-display").innerHTML = template;
+  let count = _countTodos(ProxyState.todos).toString();
+  let template2 = count + " more until done!";
+  document.getElementById("undoneTasks").innerHTML = template2;
+}
+
+function _countTodos(todos) {
+  let count = 0;
+
+  for (let i = 0; i < todos.length; i++) {
+    let todo = todos[i];
+    if (!todo.completed) {
+      count++;
+    }
+  }
+  return count;
 }
 
 export default class TodoController {
