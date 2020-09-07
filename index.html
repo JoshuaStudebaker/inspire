@@ -2,14 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style/main.css" />
     <title>Inspire</title>
   </head>
 
   <body>
-    <main>
+    <main class="container-fluid" id="background">
     <form onsubmit="app.todoController.addTodo()">
         <div class="form-group"><label for=description">Task</label>
             <input type="text" class="form-control" name="description" id="description" placeholder="Task..." />
@@ -22,10 +24,10 @@
       <div id="quote-display"></div>
       <div id="image-display"></div>
     </main>
-    <footer class="container-fluid bg-transparent text-light">
+    <footer class="container-fluid bg-transparent text-dark">
       <div class="row text-center">
         <div class="col">
-          <p><small>Made with love by Codeworks</small></p>
+          <p><small>Crafted by Studeworks</small></p>
         </div>
       </div>
     </footer>

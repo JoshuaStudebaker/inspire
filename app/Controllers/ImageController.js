@@ -5,7 +5,7 @@ import imageService from "../Services/ImageService.js";
 
 function drawImage() {
   let template = ProxyState.image.Template;
-  document.getElementById("image-display").innerHTML = template;
+  document.getElementById("background").style.backgroundImage = template;
 }
 export default class ImageController {
   constructor() {

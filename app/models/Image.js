@@ -6,7 +6,7 @@ export default class Image {
 
   get Template() {
     return `
-    <img src="${this.url}">
+    url(${this.url})
     `;
   }
 }
