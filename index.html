@@ -2,27 +2,56 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="assets/style/main.css" />
     <title>Inspire</title>
   </head>
 
   <body>
     <main class="container-fluid" id="background">
-    <form onsubmit="app.todoController.addTodo()">
-        <div class="form-group"><label for=description">Task</label>
-            <input type="text" class="form-control" name="description" id="description" placeholder="Task..." />
-            </div>
-            <div class="col-auto"><button type="submit" class="btn btn-primary mb-2">Submit</button></div>
-    </form>
-      <div id="todos-display"></div>
-      <div id="app"></div>
       <div id="weather-display"></div>
       <div id="quote-display"></div>
-      <div id="image-display"></div>
+      <div class="row justify-content-end row-on-bottom">
+        <div class="col-12 col-md-4 my-2">
+          <div class="card p-2 shadow">
+            <div class="card-header shadow mb-1">Your To-Dos</div>
+            <ul
+              class="list-group list-group-flush no-bottom-border"
+              id="todos-display"
+            ></ul>
+            <div class="card-footer shadow mt-1">
+              <form onsubmit="app.todoController.addTodo()">
+                <div class="form-row">
+                  <div class="form-group col-9">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="description"
+                      id="description"
+                      placeholder="Enter Item..."
+                    />
+                  </div>
+                  <div class="col-3 form-group text-right">
+                    <button type="submit" class="btn btn-primary btn-sm">
+                      Create
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="container-fluid bg-transparent text-dark">
       <div class="row text-center">
@@ -37,15 +66,24 @@
       crossorigin="anonymous"
     ></script>
     <script src="app/main.js" type="module"></script>
-    <script src="https://kit.fontawesome.com/4dd4faf761.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/4dd4faf761.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
