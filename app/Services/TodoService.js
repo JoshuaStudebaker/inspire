@@ -45,6 +45,11 @@ class TodoService {
     //TODO Work through this one on your own
     //		what is the request type
     //		once the response comes back, how do you update the state
+
+    await api.delete(todoId);
+    let index = ProxyState.todos.findIndex((t) => t._id == todoId);
+    ProxyState.todos.splice(index, 1);
+    ProxyState.todos = ProxyState.todos;
   }
 }
 
