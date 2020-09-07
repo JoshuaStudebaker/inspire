@@ -10,7 +10,7 @@ class App {
     this.todoController = new TodoController();
     this.quoteController = new QuoteController();
     this.imageController = new ImageController();
-add    clock();
+    clock();
   }
 }
 function clock() {
