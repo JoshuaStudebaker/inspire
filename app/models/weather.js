@@ -9,7 +9,10 @@ export default class Weather {
 
     this.city = data.name;
     this.kelvin = data.main.temp;
+
   }
+  let celsius = this.kelvin - 273.15
+  let fahrenheit = celsius*9/5 + 32
 
   get Template() {
     return `
