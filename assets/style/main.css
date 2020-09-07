@@ -69,6 +69,11 @@ i {
   text-shadow: 1px 1px 0px var(--hue-winter-blue);
 }
 
+.blue-pointer {
+  cursor: pointer;
+  color: blue;
+}
+
 .row-full {
   height: 80vh;
 }

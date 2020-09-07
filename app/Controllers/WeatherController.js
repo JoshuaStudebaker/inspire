@@ -23,4 +23,8 @@ export default class WeatherController {
       console.error(e);
     }
   }
+
+  temperatureUnit() {
+    weatherService.temperatureUnit();
+  }
 }

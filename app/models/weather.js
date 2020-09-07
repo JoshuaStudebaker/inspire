@@ -19,15 +19,17 @@ export default class Weather {
 
   get Template() {
     return `
-  <h3 class="weather my-0">${this.city} Weather:</h3><h3 class="text-muted">${this.TemplateUnit} and ${this.description}</h3>
+  <h3 class="weather my-0">${this.city} Weather:</h3><h3 class="text-muted">${this.description} and ${this.TemplateUnit}</h3>
   `;
   }
 
   get TemplateUnit() {
     if (!this.temperatureUnitF) {
-      return `${this.celsius}C
+      return `${this.celsius}C | <span class="blue-pointer" onclick="app.weatherController.temperatureUnit()">F</span>
     `;
     }
-    return `${this.fahrenheit}F`;
+    return `${this.fahrenheit}F | <span class="blue-pointer" onclick="app.weatherController.temperatureUnit()">C</span>`;
   }
+
+  
 }
