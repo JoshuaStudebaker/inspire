@@ -7,24 +7,33 @@ export default class Todo {
   }
 
   get Template() {
-    if (!this.completed) {
-      return `
-      
-      <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="completed">
-      <label class="custom-control-label" for="completed" value="" onclick="app.todoController.toggleTodoStatus('${this._id}')">${this.description}</label>
-      <i class="fas fa-trash" onclick="app.todoController.removeTodo('${this._id}')"></i>
-      </div>
-      
-      `;
-    }
-
     return `
     <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="completed" checked>
-      <label class="custom-control-label text-muted" for="completed" value="" onclick="app.todoController.toggleTodoStatus('${this._id}')"><s>${this.description}</s></label>
+      <input type="checkbox" class="custom-control-input" id="completed" ${this.CheckedTemplate}>
+      <label class="custom-control-label text-muted" for="completed" value="" onclick="app.todoController.toggleTodoStatus('${this._id}')">${this.StrikethroughTemplateStart}${this.description}${this.StrikethroughTemplateEnd}</label>
       <i class="fas fa-trash" onclick="app.todoController.removeTodo('${this._id}')"></i>
       </div>
     `;
+  }
+
+  get CheckedTemplate() {
+    if (!this.completed) {
+      return ``;
+    }
+    return `checked`;
+  }
+
+  get StrikethroughTemplateStart() {
+    if (!this.completed) {
+      return ``;
+    }
+    return `<s>`;
+  }
+
+  get StrikethroughTemplateEnd() {
+    if (!this.completed) {
+      return ``;
+    }
+    return `</s>`;
   }
 }

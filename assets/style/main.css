@@ -29,7 +29,6 @@
   --hue-snow-grey: hsla(218, 19%, 89%, 1);
   --hue-winter-grey: hsla(218, 19%, 59%, 1);
   --halfway-see-through-snow-grey: hsla(218, 19%, 89%, 0.75);
-  --halfway-see-through-snow-grey: hsla(218, 19%, 89%, 0.75);
 }
 
 body {
@@ -54,6 +53,10 @@ footer {
 #background {
   background-position: center;
   background-size: cover;
+}
+
+.card-class {
+  background-color: var(--halfway-see-through-snow-grey);
 }
 
 .no-bottom-border {
