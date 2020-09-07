@@ -38,6 +38,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--hue-winter-blue);
+  font-family: "Balthazar", serif;
 }
 
 main {

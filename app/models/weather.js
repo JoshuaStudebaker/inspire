@@ -9,13 +9,22 @@ export default class Weather {
 
     this.city = data.name;
     this.kelvin = data.main.temp;
+    this.celsius = Math.round(this.kelvin - 273.15);
+    this.fahrenheit = Math.round((this.celsius * 9) / 5 + 32);
+    this.temperatureUnitF = true;
   }
 
   get Template() {
-    let celsius = this.kelvin - 273.15;
-    let fahrenheit = (celsius * 9) / 5 + 32;
     return `
-  <p>Weather: ${this.kelvin}K - ${this.city}</p>
+  <p>Weather: ${this.TemplateUnit} - ${this.city}</p>
   `;
+  }
+
+  get TemplateUnit() {
+    if (!this.temperatureUnitF) {
+      return `${this.celsius}C
+    `;
+    }
+    return `${this.fahrenheit}F`;
   }
 }
