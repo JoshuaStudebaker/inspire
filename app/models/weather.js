@@ -12,11 +12,14 @@ export default class Weather {
     this.celsius = Math.round(this.kelvin - 273.15);
     this.fahrenheit = Math.round((this.celsius * 9) / 5 + 32);
     this.temperatureUnitF = true;
+    this.icon = data.weather[0].icon;
+    this.description = data.weather[0].main;
+    console.log(data);
   }
 
   get Template() {
     return `
-  <p>Weather: ${this.TemplateUnit} - ${this.city}</p>
+  <p>${this.city} Weather: ${this.TemplateUnit} and ${this.description}</p>
   `;
   }
 
