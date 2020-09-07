@@ -6,8 +6,8 @@ export default class Quote {
   }
   get Template() {
     return `
-    <p class="text-right mb-0">"<i>${this.body}</i>"</p>
-    <p class="text-right"> - ${this.author}</p>
+    <p class="text-right mb-0 author-hover">"<i>${this.body}</i>"</p>
+    <p class="text-right author-hide"> - ${this.author}</p>
     
     `;
   }

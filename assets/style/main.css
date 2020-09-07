@@ -47,6 +47,7 @@ main {
 
 footer {
   background-color: var(--hue-winter-blue);
+  height: 10vh;
 }
 
 #background {
@@ -58,7 +59,11 @@ footer {
   border-bottom: 0 !important;
 }
 
-.author-hover:hover {
+.author-hide {
+  display: none;
+}
+
+.author-hover:hover + .author-hide {
   display: block;
 }
 
