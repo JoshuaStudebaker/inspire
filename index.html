@@ -18,9 +18,14 @@
   </head>
 
   <body>
-    <main class="container-fluid" id="background">
-      <div id="weather-display"></div>
-      <div id="quote-display"></div>
+    <header class="container-fluid">
+      <div class="row text-center">
+        <div class="col">
+          <div id="weather-display" class="text-left"></div>
+        </div>
+      </div>
+    </header>
+    <main class="container-fluid shadow" id="background">
       <div class="row justify-content-end row-on-bottom">
         <div class="col-12 col-md-4 my-2">
           <div class="card p-2 shadow">
@@ -53,10 +58,10 @@
         </div>
       </div>
     </main>
-    <footer class="container-fluid bg-transparent text-dark">
+    <footer class="container-fluid">
       <div class="row text-center">
         <div class="col">
-          <p><small>Crafted by Studeworks</small></p>
+          <div id="quote-display"></div>
         </div>
       </div>
     </footer>

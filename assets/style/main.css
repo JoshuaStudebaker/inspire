@@ -21,8 +21,8 @@
   --hue-swan-blue: hsl(177.93, 93.55%, 71.76%);
   --hue-swan-blue-darker: hsl(177.93, 93.55%, 51.76%);
 
-  --hg-winter-blue: hsla(195, 53%, 79%, 1);
-  --hg-winter-blue-darker: hsla(195, 53%, 59%, 1);
+  --hue-winter-blue: hsla(195, 53%, 79%, 1);
+  --hue-winter-blue-darker: hsla(195, 53%, 59%, 1);
   --halfway-see-through-winter-blue: hsla(195, 53%, 79%, 0.5);
 
   --hue-snow: hsla(218, 19%, 98%, 1);
@@ -32,20 +32,26 @@
   --halfway-see-through-snow-grey: hsla(218, 19%, 89%, 0.75);
 }
 
-#background {
-  background-position: center;
-  background-size: cover;
-}
-
 body {
+  padding: 5px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: var(--hue-winter-blue);
 }
 
 main {
   flex-grow: 1;
   position: relative;
+}
+
+footer {
+  background-color: var(--hue-winter-blue);
+}
+
+#background {
+  background-position: center;
+  background-size: cover;
 }
 
 .no-bottom-border {
