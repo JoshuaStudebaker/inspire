@@ -1,5 +1,5 @@
 import { ProxyState } from "../AppState.js";
-import Weather from "../models/Weather.js";
+import Weather from "../models/weather.js";
 import { api } from "./AxiosService.js";
 
 class WeatherService {

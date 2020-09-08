@@ -30,6 +30,4 @@ export default class Weather {
     }
     return `${this.fahrenheit}F | <span class="blue-pointer" onclick="app.weatherController.temperatureUnit()">C</span>`;
   }
-
-  
 }
