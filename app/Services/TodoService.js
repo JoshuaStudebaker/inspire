@@ -1,6 +1,6 @@
 import { ProxyState } from "../AppState.js";
 import { api } from "./AxiosService.js";
-import Todo from "../Models/Todo.js";
+import Todo from "../models/Todo.js";
 
 // TODO you will need to change 'YOURNAME' to your actual name or all requests will be rejected
 let url = "joshua/todos/";
