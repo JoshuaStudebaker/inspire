@@ -1,7 +1,7 @@
-import Todo from "./Models/Todo.js";
-import Weather from "./Models/Weather.js";
-import Quote from "./Models/Quote.js";
-import Image from "./Models/Image.js";
+import Todo from "./models/Todo.js";
+import Weather from "./models/Weather.js";
+import Quote from "./models/Quote.js";
+import Image from "./models/Image.js";
 import { EventEmitter } from "./Utils/EventEmitter.js";
 import { isValidProp } from "./Utils/isValidProp.js";
 
