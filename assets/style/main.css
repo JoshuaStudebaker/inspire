@@ -96,6 +96,9 @@ i {
   border-bottom: 0 !important;
 }
 
+.line-spacing {
+  line-height: 1;
+}
 .author-hide {
   display: none;
 }
@@ -103,8 +106,3 @@ i {
 .author-hover:hover + .author-hide {
   display: block;
 }
-
-/* .row-on-bottom {
-  position: absolute;
-  bottom: 0;
-} */
